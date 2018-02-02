@@ -1,1 +1,55 @@
-home
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Hot Restaurant </title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- JQuery CDN -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script>
+
+</head>
+<body>
+	<div class = "container">
+		<div class="row">
+			<div class="col-sm-12">
+	<div class="jumbotron">
+  <h1 class="display-3" &#9788;> Hot Restaurant</h1> 
+  <hr class="my-4">
+  <p>We only have 5 tables! Book your seat before they all are gone!</p>
+  <p class="lead">
+    <a id = "table-View" class="btn btn-primary btn-lg" href="#" role="button">View Tables</a>
+    <a id= "reservation" class="btn btn-primary btn-lg" href="#" role="button">Make Reservations</a>
+  </p>
+</div> <!-- end of jumbotron -->
+</div> <!--end of row -->
+</div> <!-- end of container-->
+  <script type="text/javascript">
+    // Question: What does this code do?
+    $("#table-View").on("click", function(event) {
+      event.preventDefault();
+
+      // Question: What does this code do??
+      app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "tables.html"));
+    });
+
+      $("#reservation").on("click", function(event) {
+      event.preventDefault();
+
+      // Question: What does this code do??
+      app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "reserve.html"));
+    });
+  </script>
+
+
+</body>
+<a href="---Input heroku link/api/tables">link text</a> |
+<a href="---Input heroku link/api/waitlist">link text</a>
+</html>
